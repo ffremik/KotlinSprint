@@ -1,17 +1,14 @@
 package lesson1
 
-fun main() {
-    var second: Int = 6480
-    var minute: Int = 0
-    var hour: Int = 0
+const val MINUTES_AND_HOURS : Byte = 60
 
-    while (second >= 60) {
-        minute++
-        second -= 60
-        if (minute >= 60){
-            hour++
-            minute -= 60
-        }
-    }
-    println("0$hour:$minute:0$second") //честно скажу, не знаю как отобразить числовые переменные у которых идёт 0. Знаю есть различные функции, но тут пока тема про переменные идёт
+fun main() {
+    val second: Int = 6480
+    val minute: Int = second / MINUTES_AND_HOURS
+    val hour: Int = minute / MINUTES_AND_HOURS
+    val remainingMinutes: Int = minute % MINUTES_AND_HOURS
+    val remainingSecond: Int = second % MINUTES_AND_HOURS
+
+
+    println(String.format("%02d:%02d:%02d", hour, remainingMinutes, remainingSecond))
 }
