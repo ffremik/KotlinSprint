@@ -1,11 +1,14 @@
 package lesson2
-
+    const val NUMBER_STUDENTS = 4
 fun main() {
-    val averageNumber:Double = (3+4+3+5)/4.0
-    println(averageNumber)
+    val studentOne = 3
+    val studentTo = 4
+    val studentThree = 3
+    val studentFour = 5
 
-    //немного другой подход
-    //val averageNumber = arrayOf(3,4,3,5)
-    //println(averageNumber.average())
+    val averageNumber = (studentOne + studentTo + studentThree + studentFour).toFloat() / NUMBER_STUDENTS
+
+    println("Средняя оценка в классе $averageNumber")
+
 
 }
