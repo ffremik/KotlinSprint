@@ -2,10 +2,10 @@ package lesson4
 
 fun main() {
     val totalTables = 14
-    val freeTableToday = 14
-    val freTableTomorrow = 10
+    val busyTableToday = 14
+    val busyTableTomorrow = 10
 
-    println("Доступность столиков на сегодня:${freeTableToday < totalTables}\n" +
-            "Доступность столиков на завтра:${freTableTomorrow < totalTables}")
+    println("Доступность столиков на сегодня:${busyTableToday < totalTables}\n" +
+            "Доступность столиков на завтра:${busyTableTomorrow < totalTables}")
 
 }
