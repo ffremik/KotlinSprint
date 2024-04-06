@@ -2,6 +2,7 @@ package lesson4
     const val INITIAL_WEIGHT_AVERAGE = 35
     const val MAX_WEIGHT_AVERAGE = 100
     const val MAX_VOLUME = 100
+
 fun main() {
     val weightFirstCargo = 20
     val volumeFirstCargo = 80
