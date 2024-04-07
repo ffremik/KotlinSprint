@@ -1,13 +1,18 @@
 package lesson5
-    const val AGE_OF_MAJORITY = 18
+
+const val AGE_OF_MAJORITY = 18
+
 fun main() {
     val year = 2024
     val userYear: Int
+    val isAccess: Boolean
 
     println("Введите ваш год рождения")
-    userYear = readLine()!!.toInt()
+    userYear = readln().toInt()
 
-    if (year - userYear >= AGE_OF_MAJORITY){
+    isAccess = year - userYear >= AGE_OF_MAJORITY
+
+    if (isAccess){
         println("Показать экран со скрытым контентом")
     }else{
         println("Доступ закрыт")
