@@ -1,22 +1,33 @@
 package lesson4
+//Условия для экспедиции
+const val DAMAGE = false
+const val CREW_MIN_SIZE = 55
+const val CREW_MAX_SIZE = 70
+const val MINIMUM_PROVISIONS = 50
+const val WEATHER = true
+
 
 fun main() {
-    //Условия для экспедиции
-    val withoutDamage: Boolean
-    val crewSize = 55..70
-    val minimumProvisions = 50
-    val favorableWeather: Boolean
-
     //Входные условия экспедиции
-    withoutDamage  = readLine().toBoolean()
-    val crew = readLine()?.toInt()
-    val provisions = readLine()?.toInt()
-    favorableWeather = readLine().toBoolean()
+    val isDamage: Boolean
+    val isWeather: Boolean
+    val crew: Int
+    val provisions: Int
 
-    if (!withoutDamage && crew in crewSize && provisions!! >= minimumProvisions){
+    println("Введите данные для отправки в экспедицию")
+    println("Если у коробля повреждения ? true/false")
+    isDamage = readln().toBoolean()
+    println("Текущий состав экипажа ? ")
+    crew = readln().toInt()
+    println("Количество ящиков с провизией на борту")
+    provisions = readln().toInt()
+    println("Благоприятная погода? true/false")
+    isWeather = readLine().toBoolean()
+
+    if (isDamage == DAMAGE && crew in CREW_MIN_SIZE..CREW_MAX_SIZE && provisions >= MINIMUM_PROVISIONS){
         println("Корабль может отправляться в экспедицию")
     }
-    else if (withoutDamage && crew == crewSize.max() && provisions!! >= minimumProvisions && favorableWeather) {
+    else if (isDamage && crew == CREW_MAX_SIZE && provisions >= MINIMUM_PROVISIONS && isWeather == WEATHER) {
         println("Корабль может отправляться в экспедицию имея незначительные повреждения")
     }else{
         println("Корабль не может отправляться в экспедицию")
