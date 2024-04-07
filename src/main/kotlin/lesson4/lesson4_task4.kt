@@ -6,8 +6,9 @@ fun main() {
     var legExerciseCurrent: Boolean
     var backExerciseCurrent: Boolean
     var abdominalExerciseCurrent: Boolean
+    val isEven: Boolean = (day % 2) == 0
 
-    if (day % 2 == 0) {
+    if (isEven) {
         armExerciseCurrent = false
         legExerciseCurrent = true
         backExerciseCurrent = true
