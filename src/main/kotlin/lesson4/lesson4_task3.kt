@@ -1,20 +1,20 @@
 package lesson4
 
+//благоприятные условия для роста бобовых
+const val PRESENCE_SUNNY_WEATHER = true
+const val OPEN_AWNING = true
+const val AIR_HUMIDITY = 20
+const val TIME_YEAR = "не зима"
+
 fun main() {
-    //благоприятные условия для роста бобовых
-    val presenceSunnyWeather = true
-    val openAwning = true
-    val airHumidity = 20
-    val timeYear = "Лето, Весна, Осень"
-
     //текущие условия
-    val currentSunnyWeather = true
-    val currentOpenAwning = true
+    val isSunny = true
+    val isAwningOpen = true
     val currentAirHumidity = 20
-    val currentTimeYear = "Зима"
+    val currentTimeYear = "зима"
 
-    val result = presenceSunnyWeather == currentSunnyWeather && openAwning == currentOpenAwning
-            && airHumidity == currentAirHumidity && timeYear.contains(currentTimeYear)
+    val result = PRESENCE_SUNNY_WEATHER == isSunny && OPEN_AWNING == isAwningOpen
+            && AIR_HUMIDITY == currentAirHumidity && !TIME_YEAR.contains(currentTimeYear)
 
     println("Благоприятная ли условия сейчас для роста бобовых? $result ")
 
