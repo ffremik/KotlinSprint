@@ -12,9 +12,9 @@ fun main() {
 
     isAccess = year - userYear >= AGE_OF_MAJORITY
 
-    if (isAccess){
+    if (isAccess) {
         println("Показать экран со скрытым контентом")
-    }else{
+    } else {
         println("Доступ закрыт")
     }
 }
