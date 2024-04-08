@@ -13,10 +13,10 @@ fun main() {
 
     if (userNumberFirst == correctNumberFirst || userNumberFirst == correctNumberSecond) {
         message = "Вы выиграли утешительный приз. Загаданные числа $correctNumberFirst и $correctNumberSecond"
-        if (userNumberSecond == correctNumberFirst || userNumberSecond == correctNumberSecond){
+        if (userNumberSecond == correctNumberFirst || userNumberSecond == correctNumberSecond) {
             message = "Вы выиграли главный приз. Загаданные числа $correctNumberFirst и $correctNumberSecond"
         }
-    }else{
+    } else {
         message = "Вы проиграли. Загаданные числа $correctNumberFirst и $correctNumberSecond"
     }
 
