@@ -8,16 +8,13 @@ fun main() {
     val correctNumberThird = Random.nextInt(0, 42)
     val correctNumber = listOf(correctNumberFirst, correctNumberSecond, correctNumberThird)
 
-    val userNumberFirst: Int
-    val userNumberSecond: Int
-    val userNumberThird: Int
     val sizeCorrectNumber: Int
     val message: String
 
     println("Необходимо угадать три числа от 0 до 42. Введите числа по очереди:")
-    userNumberFirst = readln().toInt()
-    userNumberSecond = readln().toInt()
-    userNumberThird = readln().toInt()
+    val userNumberFirst = readln().toInt()
+    val userNumberSecond = readln().toInt()
+    val userNumberThird = readln().toInt()
 
     val userNumber = listOf(userNumberFirst, userNumberSecond, userNumberThird)
     sizeCorrectNumber = userNumber.intersect(correctNumber).size
