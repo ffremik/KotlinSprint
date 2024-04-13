@@ -40,7 +40,7 @@ fun userChoice(choice: Array<String>): String {
     return userReply
 }
 
-fun resultGame(userChoice: String, gameChoice: String) {
+private fun resultGame(userChoice: String, gameChoice: String) {
     if (userChoice == gameChoice) {
         println("У вас ничья! \nВы выбрали:$userChoice, Компьютер выбрал:$gameChoice")
     } else if (userChoice.lowercase() == "камень" && gameChoice.lowercase() == "ножницы"
