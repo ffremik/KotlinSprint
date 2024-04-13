@@ -33,7 +33,7 @@ fun choiceGame(listChoice: List<String>): String {
 }
 
 
-fun resultGame(user: String, game: String) {
+private fun resultGame(user: String, game: String) {
     if (user == game) {
         println("Поздравляю, вы угадали ")
     } else {
